@@ -1,0 +1,43 @@
+ <div>
+        <button onclick='prev()'>prev</button>
+        <img id='slider' src='https://img.publimetro.pe/sites/7/2020/07/09/dinj4fe2orej5fvkhbqlnpx77i-600x338.jpg'
+            alt='no encontrada' width='700px' height='400px'>
+        <button onclick='next()'>next</button>
+    </div>
+
+
+
+
+    <script>
+        var num = 0;
+        function next() {
+            var slider = document.getElementById('slider');
+            num++;
+            if (num >= imag.length) {
+                num = 0;
+            }
+            slider.src = imag[num];
+        }
+
+        function prev() {
+            var slider = document.getElementById('slider');
+            num--;
+            if (num < 0) {
+                num = imag.length - 1;
+            }
+            slider.src = imag[num];
+        }
+
+        mostrarNotasAnim();
+    </script>
+
+
+
+ /*
+     div.appendChild(text);
+      ven.appendChild(div);
+    var a;
+            for (var i in cuadrosEm) {
+              a += "<p>" + cuadrosEm[i] + "</p><br>/n";
+              return a;
+            }*/
